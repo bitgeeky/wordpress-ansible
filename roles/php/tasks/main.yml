@@ -1,0 +1,15 @@
+---
+# ··············································································
+# ### Install PHP
+# ··············································································
+
+- name       : Install PHP and its modules
+  yum        :
+    pkg      : "{{ item }}"
+    state    : latest
+  with_items :
+    - php
+    - php-process
+    - php-mysql
+    - php-xml
+    - php-fpm
